@@ -23,7 +23,7 @@ const AnimationExample = () => (
     <Router basename="/home">
         <Route
             render={({ location }) => (
-                <div style={{position: 'relative', height="100$"}}>
+                <div style={{position: 'relative', height:'100%'}}>
                     <Route
                         exact
                         path="/"

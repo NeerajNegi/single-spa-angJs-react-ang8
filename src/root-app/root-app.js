@@ -8,7 +8,7 @@ function pathPrefix(prefix) {
 
 registerApplication(
     'home',
-    () => import('./src/home/home.app.js'),
+    () => import('../home/home.app.js'),
     (location) => location.pathname === "" ||
         location.pathname === "/" ||
         location.pathname.startsWith('/home')
@@ -16,14 +16,20 @@ registerApplication(
 
 registerApplication(
     'navBar',
-    () => import('./src/navBar/navBar.app.js').then(module => module.navBar),
+    () => import('../navBar/navBar.app.js').then(module => module.navBar),
     () => true
 );
 
 registerApplication(
     'angularJS',
-    () => import('./src/angularJS/angularJS.app.js'),
+    () => import('../angularJS/angularJS.app.js'),
     pathPrefix('/angularJS')
+);
+
+registerApplication(
+    'angular8',
+    () => import('../angular8/angular8.app.js'),
+    () => true
 );
 
 start();
